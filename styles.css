@@ -1,12 +1,16 @@
-/* Reset & Base */
+/* =========================
+   Reset & Base
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
   line-height: 1.6;
@@ -14,7 +18,9 @@ body {
   background: #f5f7ff; /* Light bluish-white background */
 }
 
-/* Typography Improvements */
+/* =========================
+   Typography Improvements
+========================= */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -28,23 +34,28 @@ p, li {
   color: var(--text-color);
 }
 
-/* Links */
+/* =========================
+   Links
+========================= */
 a {
   color: #6b5cff; /* Vibrant purple for links */
   text-decoration: none;
 }
+
 a:hover {
   color: #85169b; /* Pinkish hover effect */
   text-decoration: underline;
 }
 
-/* Navbar */
+/* =========================
+   Navbar
+========================= */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%); /* Blue-purple gradient */
+  background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -55,17 +66,20 @@ nav {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
+
 nav .logo {
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 2px;
-  color: #f0e6ff; /* Light purple-white for logo */
+  color: #f0e6ff;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
+
 nav ul li a {
   color: #f0e6ff;
   font-weight: 600;
@@ -74,90 +88,81 @@ nav ul li a {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 nav ul li a.active,
 nav ul li a:hover {
-  background: #ff6b9b; /* Pinkish accent for active/hover */
+  background: #ff6b9b;
   color: #fff;
 }
 
-/* Mobile nav */
-@media (max-width: 768px) {
-  nav ul {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%); /* Consistent gradient */
-    height: calc(100% - 60px);
-    flex-direction: column;
-    width: 220px;
-    transition: right 0.3s ease;
-    padding-top: 1rem;
-  }
-  nav ul.open {
-    right: 0;
-  }
-  nav ul li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  nav .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.6rem;
-    user-select: none;
-    color: #f0e6ff;
-  }
-}
+/* Menu Toggle */
 nav .menu-toggle {
   display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  user-select: none;
+  color: #f0e6ff;
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 section {
   padding: 100px 12vw;
-  background: #f5f7ff; /* Light bluish-purple background */
-  border-bottom: 1px solid #d8d9ff; /* Light purple border */
+  background: #f5f7ff;
+  border-bottom: 1px solid #d8d9ff;
   border-radius: 15px;
   animation: fadeInUp 1s ease-in-out;
 }
+
 section.alternate {
-  background: #f0e6ff; /* Light purple background for alternate sections */
+  background: #f0e6ff;
 }
+
 section h2 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #2a2a4a; /* Dark blue-purple for headings */
-  border-bottom: 3px solid #6b5cff; /* Vibrant purple underline */
+  color: #2a2a4a;
+  border-bottom: 3px solid #6b5cff;
   padding-bottom: 6px;
   max-width: max-content;
 }
+
 section p, section ul, section table {
   margin-bottom: 1rem;
 }
+
 section ul {
   padding-left: 20px;
 }
 
-/* Table Style */
+/* =========================
+   Table Styles
+========================= */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
+
 table, th, td {
-  border: 1px solid #d8d9ff; /* Light purple borders */
+  border: 1px solid #d8d9ff;
 }
+
 th, td {
   padding: 10px 14px;
   text-align: left;
 }
+
 th {
-  background-color: #e6e9ff; /* Light bluish-purple for table headers */
+  background-color: #e6e9ff;
   color: #2a2a4a;
 }
 
-/* Button Enhancements */
+/* =========================
+   Buttons & Cards
+========================= */
 .btn {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -165,28 +170,31 @@ th {
   animation: fadeInUp 1s ease-in-out;
 }
 
-/* Card Enhancements */
 .card {
   padding: 2.5rem;
   border-radius: 20px;
   animation: fadeInUp 1s ease-in-out;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 2.5rem 1rem;
-  background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%); /* Matching navbar gradient */
+  background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%);
   color: #f0e6ff;
   font-size: 1rem;
 }
 
-/* Back to Top */
+/* =========================
+   Back to Top
+========================= */
 #backToTop {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #6b5cff; /* Purple button */
+  background: #6b5cff;
   color: #fff;
   border: none;
   width: 50px;
@@ -202,27 +210,34 @@ footer {
   z-index: 1000;
   transition: background 0.3s ease;
 }
+
 #backToTop:hover {
-  background: #ff6b9b; /* Pinkish hover */
+  background: #ff6b9b;
 }
 
-/* Admin Experience specific styling */
+/* =========================
+   Admin Experience
+========================= */
 .admin-experience {
-  background: #e6e9ff; /* Light bluish-purple */
-  border-left: 5px solid #6b5cff; /* Purple accent */
+  background: #e6e9ff;
+  border-left: 5px solid #6b5cff;
   padding: 1rem 1.5rem;
   margin-top: 1rem;
   border-radius: 6px;
 }
+
 .admin-experience ul {
   list-style-type: disc;
   margin-left: 1.5rem;
 }
+
 .admin-experience li {
   margin-bottom: 0.8rem;
 }
 
-/* Subtle Animations */
+/* =========================
+   Animations
+========================= */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -234,8 +249,9 @@ footer {
   }
 }
 
-/* Mobile Scalability Enhancements */
-
+/* =========================
+   Tablet View
+========================= */
 @media (max-width: 768px) {
   body {
     font-size: 90%;
@@ -254,6 +270,18 @@ footer {
   nav ul {
     flex-direction: column;
     gap: 1rem;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    height: calc(100% - 60px);
+    width: 220px;
+    padding-top: 1rem;
+    background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%);
+    transition: right 0.3s ease;
+  }
+
+  nav ul.open {
+    right: 0;
   }
 
   section {
@@ -284,5 +312,109 @@ footer {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+}
+
+/* =========================
+   Phone View
+========================= */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+    height: auto;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 200px;
+    height: calc(100% - 60px);
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    background: linear-gradient(135deg, #2a2a4a 0%, #5c4bff 100%);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  nav ul.open {
+    right: 0;
+  }
+
+  nav ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 50px 4vw;
+    margin: 8px 0;
+    border-radius: 10px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  section p, section ul, section table {
+    font-size: 0.9rem;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table th, table td {
+    padding: 8px 10px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .admin-experience {
+    padding: 0.8rem 1rem;
+    margin-top: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 20px;
+    right: 20px;
   }
 }
